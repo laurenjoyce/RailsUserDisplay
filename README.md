@@ -1,24 +1,57 @@
-# README
+# PopPaysTechnical: Rails User Display
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple rails application that displays a user list and user show pages. Allows for the adding, editing, and deletion of users. 
 
-Things you may want to cover:
+The list of users and individuals users can be returned as json payload if requested.
 
-* Ruby version
+####Ruby Version
+   
+ruby-2.6.2
 
-* System dependencies
+####Rails Version
 
-* Configuration
+   rails-5.2.3
 
-* Database creation
+###Bundle/Installation Instructions
 
-* Database initialization
+* Clone Guthub repo
+* CD into application folder
 
-* How to run the test suite
+All necessary libraries and packages for running this application are provided in the GEMFILE included in the source-code. Use the command:
 
-* Services (job queues, cache servers, search engines, etc.)
+```$ bundle install```
 
-* Deployment instructions
+to install all libraries and packages listed.
+
+###Local Testing and Development
+
+In the root directory 'PopPaysTechnical', run the following command in your terminal:
+
+```rails server```
+
+Navigate to 'http://localhost:3000/' on your web browser to run the application locally.
+
+To be returned as json payload, add '.json' to the end of the user list path or user path:
+
+```http://localhost:3000/users.json```
+```http://localhost:3000/users/1.json```
+
+###Database creation
+* Uses sqlite3 as the database for Active Record
+
+
+###How to run the test suite
+
+Uses Minitest test suite for Ruby
+
+* To run the Users Controller Tests, run the following command in your terminal:
+
+```ruby -Itest test/controllers/users_controller_test.rb```
+
+Uses Capybara for UI system testing and Selenium for browser automation
+
+* To run the Capybara acceptance tests for the UI, run the following command in your terminal:
+
+```ruby -Itest test/application_system_test_case.rb```
 
 * ...
