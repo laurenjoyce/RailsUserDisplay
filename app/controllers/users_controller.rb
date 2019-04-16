@@ -55,8 +55,15 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
-    @user.destroy
-    redirect_to @user, notice: "User has been successfully deleted"
+    respond_to do |format|
+      if @user.destroy 
+        format.html { redirect_to users_path, notice: "User has been successfully deleted." }
+        format.json { head :ok }
+      else 
+        format.html { redirect_to users_path, notice: "User could not be deleted." }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   private

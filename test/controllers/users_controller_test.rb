@@ -65,15 +65,16 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update user in json format" do
-    patch user_url(@user), params: { user: { id: @user.id, name: "Tarzan" } }
-    get users_url(format: :json), params: { user: { id: User.find_by(name: "Tarzan").id } }
+    patch user_url(@user, format: :json), params: { user: { id: @user.id, name: "Tarzan" } }
 
     assert_response :success
   end
 
   test "should destroy user in json format" do
     assert_difference('User.count', -1) do
-      delete user_url(@user)
+      delete user_url(@user, format: :json)
     end
+
+    assert_equal 200, response.status 
   end
 end
