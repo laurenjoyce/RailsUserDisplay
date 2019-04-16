@@ -45,4 +45,35 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to users_url
   end
+
+  test "should get index in json format" do
+    get users_url(format: :json)
+    assert_response :success
+  end
+
+  test "should create user json format" do
+    assert_difference('User.count') do
+      post users_url(format: :json), params: { user: { name: "Tarzan" } }
+    end
+
+    assert_equal JSON.parse(response.body)["id"], User.find_by(name: "Tarzan").id
+  end
+
+  test "should show user in json format" do
+    get users_url(format: :json), params: { user: { id: @user.id } }
+    assert_response :success
+  end
+
+  test "should update user in json format" do
+    patch user_url(@user), params: { user: { id: @user.id, name: "Tarzan" } }
+    get users_url(format: :json), params: { user: { id: User.find_by(name: "Tarzan").id } }
+
+    assert_response :success
+  end
+
+  test "should destroy user in json format" do
+    assert_difference('User.count', -1) do
+      delete user_url(@user)
+    end
+  end
 end

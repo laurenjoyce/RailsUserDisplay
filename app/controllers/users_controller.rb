@@ -56,6 +56,7 @@ class UsersController < ApplicationController
   # DELETE /users/1.json
   def destroy
     @user.destroy
+    redirect_to @user, notice: "User has been successfully deleted"
   end
 
   private
