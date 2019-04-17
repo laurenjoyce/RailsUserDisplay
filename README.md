@@ -1,6 +1,6 @@
 # PopPaysTechnical: Rails User Display
 
-A simple rails application that displays a user list and user show pages. Allows for the adding, editing, and deletion of users. 
+A simple rails application that displays a user list and user show pages. Allows for the adding, editing, and deletion of users. Validations set for presence and uniqueness of name, for users. 
 
 The list of users and individuals users can be returned as json payload if requested.
 
@@ -44,12 +44,16 @@ To be returned as json payload, add '.json' to the end of the user list path or 
 
 Uses Minitest test suite for Ruby
 
-* To run the Users Controller Tests, run the following command in your terminal:
+* To run the Users Controller tests, run the following command in your terminal:
 
 ```ruby -Itest test/controllers/users_controller_test.rb```
+
+* To run the User Model tests run the following command in yourl terminal:
+
+```ruby -Itest test/models/user/user_test.rb```
 
 Uses Capybara for UI system testing and Selenium for browser automation
 
 * To run the Capybara acceptance tests for the UI, run the following command in your terminal:
 
-```ruby -Itest test/application_system_test_case.rb```
+```ruby -Itest test/ui/users/application_system_test_case.rb```
