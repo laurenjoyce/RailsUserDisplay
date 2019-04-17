@@ -1,4 +1,4 @@
-# PopPaysTechnical: Rails User Display
+# Rails User Display
 
 A simple rails application that displays a user list and user show pages. Allows for the adding, editing, and deletion of users. Validations set for presence name, for users. 
 
