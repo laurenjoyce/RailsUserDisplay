@@ -4,15 +4,15 @@ A simple rails application that displays a user list and user show pages. Allows
 
 The list of users and individuals users can be returned as json payload if requested.
 
-####Ruby Version
+#### Ruby Version
    
 ruby-2.6.2
 
-####Rails Version
+#### Rails Version
 
    rails-5.2.3
 
-###Bundle/Installation Instructions
+### Bundle/Installation Instructions
 
 * Clone Guthub repo
 * CD into application folder
@@ -23,7 +23,7 @@ All necessary libraries and packages for running this application are provided i
 
 to install all libraries and packages listed.
 
-###Local Testing and Development
+### Local Testing and Development
 
 In the root directory 'PopPaysTechnical', run the following command in your terminal:
 
@@ -36,11 +36,11 @@ To be returned as json payload, add '.json' to the end of the user list path or 
 ```http://localhost:3000/users.json```
 ```http://localhost:3000/users/1.json```
 
-###Database creation
+### Database creation
 * Uses sqlite3 as the database for Active Record
 
 
-###How to run the test suite
+### How to run the test suite
 
 Uses Minitest test suite for Ruby
 
@@ -53,5 +53,3 @@ Uses Capybara for UI system testing and Selenium for browser automation
 * To run the Capybara acceptance tests for the UI, run the following command in your terminal:
 
 ```ruby -Itest test/application_system_test_case.rb```
-
-* ...
