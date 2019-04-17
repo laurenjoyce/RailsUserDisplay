@@ -14,7 +14,7 @@ ruby-2.6.2
 
 ### Bundle/Installation Instructions
 
-* Clone Guthub repo
+* Clone Github repo
 * CD into application folder
 
 All necessary libraries and packages for running this application are provided in the GEMFILE included in the source-code. Use the command:
