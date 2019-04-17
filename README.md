@@ -17,6 +17,10 @@ ruby-2.6.2
 * Clone Github repo
 * CD into application folder
 
+### Database initialization
+
+* Run ```rails db:migrate```
+
 All necessary libraries and packages for running this application are provided in the GEMFILE included in the source-code. Use the command:
 
 ```$ bundle install```
@@ -25,20 +29,19 @@ to install all libraries and packages listed.
 
 ### Local Testing and Development
 
-In the root directory 'PopPaysTechnical', run the following command in your terminal:
+* In the root directory 'RailsUserDisplay', run the following command in your terminal:
 
 ```rails server```
 
-Navigate to 'http://localhost:3000/' on your web browser to run the application locally.
+* Navigate to 'http://localhost:3000/users' on your web browser to run the application locally to see the user list page.
 
-To be returned as json payload, add '.json' to the end of the user list path or user path:
+* To be returned as json payload, add '.json' to the end of the user list path or user path:
 
 ```http://localhost:3000/users.json```
 ```http://localhost:3000/users/1.json```
 
 ### Database creation
 * Uses sqlite3 as the database for Active Record
-
 
 ### How to run the test suite
 
